@@ -1,0 +1,62 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Hello World
+  </h1>
+  
+  <span><h2>Favorite Movie:</h2>{{favoriteMovie}}</span>
+
+  </div>
+
+  <h3>Employee Details</h3>
+  <table style="text-align:left">
+    <tr>
+    <td><h4>ID:</h4></td>
+    <td>{{id}}</td>
+  </tr>
+  <tr>
+     <td> <h4>Name:</h4></td><td>{{Name}}</td>
+    
+  </tr>
+  <tr>
+     <td> <h4>Salary:</h4></td><td>{{Salary |currency:'INR':true :'1.2'}}</td>
+  </tr>
+
+ <tr *ngIf="Permanent">
+    <td> <h4>Permanent:</h4></td><td>{{stringpermanent}}</td>
+
+ </tr>
+
+
+ <tr>
+    <td> <h4>Department Id:</h4></td><td>{{deptno}}</td>
+ </tr>
+
+ <tr>
+    <td id="departmentName"> <h4>Department Name:</h4></td><td>{{deptname}}</td>
+ </tr>
+<tr>
+ <h3>Skills</h3>
+</tr>
+<tr style="text-align:left">
+  <th >Skill Id</th>
+  <th >Skill Name</th>
+</tr>
+<tr *ngFor="let array of skills">
+  <td >{{array.id}}</td>
+
+  <td>{{array.name}}</td>
+</tr>
+
+<pre></pre>
+<tr>
+  <th>Date Of Birth:</th><td>{{date}}</td>
+</tr>
+
+
+
+<tr>
+  <th>Date Of Birth:</th><td>{{date1|date:'MMM d,y'}}</td>
+</tr>
+
+  </table>
